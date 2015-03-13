@@ -1,2 +1,2 @@
 # CodeCook
-site: http://tangsj.com
+site: http://www.tangsj.com
