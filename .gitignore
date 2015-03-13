@@ -1,3 +1,3 @@
-./_site
-./sass-cache
-./ls
+/_site
+/ls
+/.sass-cache
