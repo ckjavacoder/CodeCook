@@ -3,5 +3,8 @@ layout: default
 title:  "Full Page"
 date:   2015-03-14 21:18:25
 categories:  tangsj
+permalink: /demo/full-page
 ---
-<p> Full Page </p> 
+<p>Full Page Demo</p>
+
+<iframe src="/iframes/full-page" frameborder="0"></iframe>
