@@ -4,4 +4,4 @@ title:  "Full Page"
 date:   2015-03-14 21:18:25
 categories:  tangsj
 ---
-<div> red </div>
+<p> Full Page </p> 
