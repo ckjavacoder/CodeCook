@@ -7,6 +7,6 @@ url: "http://tangsj.com" # the base hostname & protocol for your site
 github_username:  tangsj
 
 # Build settings
-highlighter: true
+highlighter: pygments
 markdown: redcarpet
 permalink: pretty 
