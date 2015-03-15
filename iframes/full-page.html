@@ -9,7 +9,7 @@ title: Full-Page
   <link rel="stylesheet" href="/lib/fullpage/jquery.fullPage.css">
   <script type="text/javascript" src="/lib/fullpage/jquery.fullPage.min.js"></script>
   <style>
-    #fullpage{text-align: center;}
+    #fullpage{text-align: center; color: #FFF; font-size: 24px;}
     .section1{background-color: #1BBC9B;}
     .section2{background-color: #4BBFC3;}
     .section3{background-color: #7BAABE;}
@@ -17,14 +17,27 @@ title: Full-Page
 </head>
 <body>
   <div id="fullpage">
-    <div class="section section1">section1</div>
-    <div class="section section2">section2</div>
-    <div class="section section3">section3</div>
+    <div class="section section1" data-anchor="s1">
+      <span>section1</span>
+    </div>
+    <div class="section section2" data-anchor="s2">
+      <span>section2</span>
+    </div>
+    <div class="section section3" data-anchor="s3">
+      <span>section3</span>
+    </div>
   </div>
 
   <script type="text/javascript">
     $(function(){
-      $('#fullpage').fullpage({});
+      $('#fullpage').fullpage({
+        navigation: true,
+        anchors: ['s1', 's2', 's3'],
+        navigationTooltips: ['section1', 'section2', 'section3'],
+        afterLoad : function(anchor, index){
+          $('*[data-anchor='+ anchor +']').find('span').fadeToggle('slow');
+        }
+      });
     });
   </script>
 </body>
