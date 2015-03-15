@@ -7,15 +7,15 @@ permalink: /book/st3-chinese
 ---
 在Ubuntu 14.04中安装了SublimeText 3之后发现既然不支持输入中文，于是在网上搜罗一下，发现很多人遇到了同样的问题，但是解决办法大该就只有一个。下面根据自身的安装及解决办法总结如下：
 
-###1. SublimeText 3的安装
+####**1. SublimeText 3的安装**
 
-官方下载：http://www.sublimetext.com/3
+官方下载：[http://www.sublimetext.com/3](http://www.sublimetext.com/3)
 
-###2. 相关依赖软件的安装
+####**2. 相关依赖软件的安装**
 
-sudo apt-get install build-essential libgtk2.0-dev
+    sudo apt-get install build-essential libgtk2.0-dev
 
-###3. 拷贝如下代码到文件sublime-imfix.c文件中，该文件需要自己创建，随便放到那里都行。
+####**3. 拷贝如下代码到文件sublime-imfix.c文件中，该文件需要自己创建，随便放到那里都行。**
 {% highlight c %}
 /*
  * sublime-imfix.c
@@ -40,9 +40,7 @@ struct _GdkRegion
 
 GtkIMContext *local_context;
 
-void
-gdk_region_get_clipbox (const GdkRegion *region,
-                        GdkRectangle    *rectangle)
+void gdk_region_get_clipbox (const GdkRegion *region, GdkRectangle *rectangle)
 {
     g_return_if_fail (region != NULL);
     g_return_if_fail (rectangle != NULL);
@@ -111,24 +109,36 @@ void gtk_im_context_set_client_window (GtkIMContext *context,
 {% endhighlight %}
 
 按照文件头上注释所说的编译该文件，在终端里进入到存放该文件的目录中，输入如下命令：
+
     gcc -shared -o libsublime-imfix.so sublime_imfix.c  `pkg-config --libs --cflags gtk+-2.0` -fPIC
+
 最后在当前目录下得到libsublime-imfix.so这个共享库。
 
-###4. 中文输入
-    到这里默认已经装好了中文输入法（搜狗输入法linux版）。得到第3步中的库libsublime-imfix.so之后，先试试看是否能正常使用中文输入法，在终端中输入如下命令：
-    LD_PRELOAD=./libsublime-imfix.so subl             #subl是安装好SublimeText 3后的程序启动命令
+####**4. 中文输入**
+到这里默认已经装好了中文输入法（搜狗输入法linux版）。得到第3步中的库libsublime-imfix.so之后，先试试看是否能正常使用中文输入法，在终端中输入如下命令：
+
+    LD_PRELOAD=./libsublime-imfix.so subl     
+
+subl是安装好SublimeText 3后的程序启动命令
 如果一切正常，在启动之后，搜狗输入法就能可以输入了。
 
-###5. 为了方便
-    在第4步中如果每次都输入LD_PRELOAD这样显得太不方便了，在这里提供简单修改图标连接的方式，快速打开SublimeText。将libsublime-imfix.so拷贝到系统库的默认路径中：
+####**5. 为了方便**
+在第4步中如果每次都输入LD_PRELOAD这样显得太不方便了，在这里提供简单修改图标连接的方式，快速打开SublimeText。将libsublime-imfix.so拷贝到系统库的默认路径中：
+
     sudo cp libsublime-imfix.so /usr/lib/
-    修改/usr/share/applications/sublime_text.desktop文件
+
+修改/usr/share/applications/sublime_text.desktop文件
+
     sudo vim /usr/share/applications/sublime_text.desktop
-    打开后将Exec=/opt/sublime_text/sublime_text %F修改为
+
+打开后将Exec=/opt/sublime_text/sublime_text %F修改为
+
     Exec=bash -c 'LD_PRELOAD=/usr/lib/libsublime-imfix.so /opt/sublime_text/sublime_text' %F
 
-   将Exec=/opt/sublime_text/sublime_text -n修改为
+将Exec=/opt/sublime_text/sublime_text -n修改为
+
     Exec=bash -c 'LD_PRELOAD=/usr/lib/libsublime-imfix.so /opt/sublime_text/sublime_text' -n
+
 这样就通过快捷方式打开SublimeText 3就可以支持中文输入了。
 
 注：第五步仅限使用.deb文件安装的情况，如果使用源码安装的则需要变通一下，写个脚本将LD_PRELOAD加上即可
