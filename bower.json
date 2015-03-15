@@ -1,0 +1,25 @@
+{
+  "name": "codecook",
+  "version": "0.0.1",
+  "homepage": "www.tangsj.com",
+  "authors": [
+    "<t_fate@163.com>"
+  ],
+  "description": "demo site",
+  "main": "index.html",
+  "keywords": [
+    "codecook"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "fullpage": "~2.6.1"
+  }
+}
