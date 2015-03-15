@@ -1,10 +1,38 @@
 ---
-layout: default
+layout: post
 title:  "Full Page"
 date:   2015-03-14 21:18:25
 categories:  tangsj
 permalink: /demo/full-page
 ---
-<p>Full Page Demo</p>
 
+**HTML**
+{% highlight html %}
+<div id="fullpage">
+  <div class="section section1">section1</div>
+  <div class="section section2">section2</div>
+  <div class="section section3">section3</div>
+</div>
+{% endhighlight %}
+
+**CSS**
+{% highlight css %}
+<style>
+  #fullpage{text-align: center;}
+  .section1{background-color: #1BBC9B;}
+  .section2{background-color: #4BBFC3;}
+  .section3{background-color: #7BAABE;}
+</style>
+{% endhighlight %}
+
+**Javascript**
+=============
+{% highlight javascript %}
+$(function(){
+  $('#fullpage').fullpage({});
+});
+{% endhighlight %}
+
+效果
+=============
 <iframe src="/iframes/full-page" frameborder="0"></iframe>

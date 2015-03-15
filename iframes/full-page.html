@@ -6,11 +6,26 @@ title: Full-Page
 <html>
 <head>
   {% include head.html %}
+  <link rel="stylesheet" href="/lib/fullpage/jquery.fullPage.css">
+  <script type="text/javascript" src="/lib/fullpage/jquery.fullPage.min.js"></script>
+  <style>
+    #fullpage{text-align: center;}
+    .section1{background-color: #1BBC9B;}
+    .section2{background-color: #4BBFC3;}
+    .section3{background-color: #7BAABE;}
+  </style>
 </head>
 <body>
-  <div class="section"></div>
-  <script>
-  console.log($);
+  <div id="fullpage">
+    <div class="section section1">section1</div>
+    <div class="section section2">section2</div>
+    <div class="section section3">section3</div>
+  </div>
+
+  <script type="text/javascript">
+    $(function(){
+      $('#fullpage').fullpage({});
+    });
   </script>
 </body>
 </html>
