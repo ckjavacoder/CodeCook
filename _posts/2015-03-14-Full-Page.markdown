@@ -51,3 +51,7 @@ permalink: /demo/full-page
 效果
 =============
 <iframe src="/iframes/full-page" frameborder="0"></iframe>
+
+链接
+=============
+[FullPage](/iframes/full-page)

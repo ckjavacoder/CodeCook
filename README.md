@@ -1,8 +1,7 @@
-# CodeCook
+#CodeCook
 
-Install
-=======
+###Install
 	1. bower install
 
 
-site: [www.tangsj.com](http://www.tangsj.com)
+Site: [www.tangsj.com](http://www.tangsj.com)

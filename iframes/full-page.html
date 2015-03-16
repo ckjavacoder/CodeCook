@@ -5,9 +5,10 @@
 <html>
 <head>
   {% include head.html %}
-  <link rel="stylesheet" href="/lib/fullpage/jquery.fullPage.css">
-  <script type="text/javascript" src="/lib/fullpage/jquery.fullPage.min.js"></script>
+  <link rel="stylesheet" href="/lib/fullpage.js/jquery.fullPage.css">
+  <script type="text/javascript" src="/lib/fullpage.js/jquery.fullPage.min.js"></script>
   <style>
+    .site-header{position: fixed; top:0; left: 0; width: 100%; z-index: 99; background-color: #FFF;} 
     #fullpage{text-align: center; color: #FFF; font-size: 24px;}
     .section1{background-color: #1BBC9B;}
     .section2{background-color: #4BBFC3;}
@@ -15,26 +16,33 @@
   </style>
 </head>
 <body>
+  {% include header.html %}
   <div id="fullpage">
     <div class="section section1" data-anchor="s1">
-      <span>section1</span>
+      <em>section1</em>
     </div>
     <div class="section section2" data-anchor="s2">
-      <span>section2</span>
+      <em>section2</em>
     </div>
     <div class="section section3" data-anchor="s3">
-      <span>section3</span>
-    </div>
+      <div class="slide">第三屏的第一屏</div>
+      <div class="slide">第三屏的第二屏</div>
+      <div class="slide">第三屏的第三屏</div>
+      <div class="slide">第三屏的第四屏</div>
   </div>
 
   <script type="text/javascript">
     $(function(){
       $('#fullpage').fullpage({
         navigation: true,
+        css3: true,
+        paddingTop: '62px',
         anchors: ['s1', 's2', 's3'],
+        //menu: '#myMenu',
         navigationTooltips: ['section1', 'section2', 'section3'],
+        slidesNavigation: true,
         afterLoad : function(anchor, index){
-          $('*[data-anchor='+ anchor +']').find('span').fadeToggle('slow');
+          $('*[data-anchor='+ anchor +']').find('em').fadeToggle('slow');
         }
       });
     });
