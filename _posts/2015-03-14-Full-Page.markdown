@@ -50,7 +50,7 @@ permalink: /demo/full-page
         $('*[data-anchor='+ anchor +']').find('em').fadeToggle('slow');
       }
     });
-  });
+  }); 
 </script>
 {% endhighlight %}
 
