@@ -21,7 +21,7 @@
   "dependencies": {
     "jquery": "~2.1.3",
     "fullpage.js": "~2.6.1",
-    "bxslider": "*",
-    "bx-slider.js": "~4.2.3"
+    "bx-slider.js": "~4.2.3",
+    "iscroll": "~5.1.3"
   }
 }
