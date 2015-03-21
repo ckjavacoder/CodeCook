@@ -29,3 +29,5 @@ permalink: /book/tortoiseGit-sshkey
 6. 在弹出的key管理列表中点击add key,将第4步中保存的私钥（.ppk）文件加进来，关闭对话框即可。
 
 	经上述配置后，就可以使用TortoiseGit进行push、pull操作了，不用每次都输入密码了。
+
+[原文链接](http://jingyan.baidu.com/article/63f236280f7e750209ab3d60.html)
