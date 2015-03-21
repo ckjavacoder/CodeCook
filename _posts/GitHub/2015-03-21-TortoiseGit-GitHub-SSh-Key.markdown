@@ -13,7 +13,8 @@ permalink: /book/tortoiseGit-sshkey
 **具体步骤：**
 ===
 1. 打开TortoiseGit下的PuttyGen，在打开的窗口中点击Generate按钮，会出现绿色进度条，等下生成，生成过程中可以多晃晃鼠标增加随机性。
-![](/images/github/tortoisegit/1.jpg)
+
+	![](/images/github/tortoisegit/1.jpg)
 
 2. 生成之后复制生成的全部内容，窗口先留着不关闭。
 
@@ -23,6 +24,8 @@ permalink: /book/tortoiseGit-sshkey
 
 5. 运行TortoiseGit开始菜单中的Pageant程序，程序启动后将自动停靠在任务栏中，双击该图标，弹出key管理列表
 
+	注意：提交代码时，Pageant程序不能关闭
+
 6. 在弹出的key管理列表中点击add key,将第4步中保存的私钥（.ppk）文件加进来，关闭对话框即可。
 
-经上述配置后，就可以使用TortoiseGit进行push、pull操作了，不用每次都输入密码了。
+	经上述配置后，就可以使用TortoiseGit进行push、pull操作了，不用每次都输入密码了。
