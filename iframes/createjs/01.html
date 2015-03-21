@@ -1,0 +1,27 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>CreateJS-Demo1</title>
+  <script type="text/javascript" src="/lib/easeljs/lib/easeljs-0.8.0.min.js"></script>
+</head>
+<body>
+  <canvas id="canvas" width="960" height="400"></canvas>
+
+  <script type="text/javascript">
+      var stage, title;
+      stage = new createjs.Stage('canvas');
+
+      title = new createjs.Text('CreateJS', '24px Microsoft YaHei', '#000000'); 
+      title.x = 100;
+      title.y = 100;
+
+      stage.addChild(title);
+
+      stage.update();
+  </script>
+</body>
+</html>
