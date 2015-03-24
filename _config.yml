@@ -6,10 +6,14 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.tangsj.com" # the base hostname & protocol for your site
 github_username:  tangsj
 
+port: 4000
+
 # Build settings
-# highlighter: pygments
-# markdown: redcarpet
-# permalink: pretty 
-highlighter: rouge
-markdown: kramdown
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  fenced_code_blocks: true
 permalink: pretty
+
