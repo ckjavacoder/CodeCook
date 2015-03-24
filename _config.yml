@@ -14,6 +14,6 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 highlighter: pygments
 markdown: redcarpet
 redcarpet:
-  fenced_code_blocks: true
+  extensions:
+  - fenced_code_blocks
 permalink: pretty
-
