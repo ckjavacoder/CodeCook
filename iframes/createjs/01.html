@@ -12,16 +12,35 @@
   <canvas id="canvas" width="960" height="400"></canvas>
 
   <script type="text/javascript">
-      var stage, title;
+      var stage, title, circle;
       stage = new createjs.Stage('canvas');
 
-      title = new createjs.Text('CreateJS', '24px Microsoft YaHei', '#000000'); 
+      // 写文本
+      title = new createjs.Text('CreateJS', '24px Microsoft YaHei', '#000'); 
       title.x = 100;
       title.y = 100;
 
       stage.addChild(title);
 
-      stage.update();
+      // 
+      circle = new createjs.Shape();
+      circle.graphics.beginFill("#f00").beginStroke('#000').drawCircle(0, 0, 40);
+
+      circle.x = circle.y = 50;
+
+      stage.addChild(circle);
+
+
+      circle.addEventListener('click', function(){
+        alert('circle click');
+      });
+
+      createjs.Ticker.addEventListener('tick', function(){
+        circle.x += 10;
+        if (circle.x > stage.canvas.width) { circle.x = 0; }
+        stage.update();  
+      });
+      
   </script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>CreateJS-Demo2</title>
+  <script type="text/javascript" src="/lib/easeljs/lib/easeljs-0.8.0.min.js"></script>
+</head>
+<body>
+  <canvas id="canvas" width="960" height="400"></canvas>
+
+  <script type="text/javascript">
+      var stage;
+      stage = new createjs.Stage('canvas');
+
+      var image = new Image('/images/createjs-demo/daisy.png');
+      image.onload = imageLoadedHandle;
+
+
+      function imageLoadedHandle(){
+
+
+        createjs.Ticker.addEventListener('tick', function(){
+          console.log(1);
+        });
+      }
+  </script>
+</body>
+</html>
