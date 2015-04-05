@@ -110,7 +110,7 @@ void gtk_im_context_set_client_window (GtkIMContext *context,
 
 按照文件头上注释所说的编译该文件，在终端里进入到存放该文件的目录中，输入如下命令：
 
-    gcc -shared -o libsublime-imfix.so sublime_imfix.c  `pkg-config --libs --cflags gtk+-2.0` -fPIC
+    gcc -shared -o libsublime-imfix.so sublime-imfix.c  `pkg-config --libs --cflags gtk+-2.0` -fPIC
 
 最后在当前目录下得到libsublime-imfix.so这个共享库。
 
