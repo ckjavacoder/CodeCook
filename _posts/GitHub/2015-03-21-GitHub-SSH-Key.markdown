@@ -70,7 +70,7 @@ https 和 SSH 的区别：
 
 3、 添加你的私钥到 ssh-agent
 ---
-	ssh-add ~/.ssh/id_rsa
+	$ ssh-add ~/.ssh/id_rsa
 
 4、添加你的 SSH key 到 github上面去
 ---
