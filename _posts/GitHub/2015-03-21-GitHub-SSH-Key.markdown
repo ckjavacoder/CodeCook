@@ -68,8 +68,11 @@ https 和 SSH 的区别：
 
 当你看到上面这段代码的收，那就说明，你的 SSH key 已经创建成功，你只需要添加到github的SSH key上就可以了。
 
+3、 添加你的私钥到 ssh-agent
+---
+	ssh-add ~/.ssh/id_rsa
 
-3、添加你的 SSH key 到 github上面去
+4、添加你的 SSH key 到 github上面去
 ---
 
 首先你需要拷贝 id_rsa.pub 文件的内容，你可以用编辑器打开文件复制，也可以用git命令复制该文件的内容，如：
