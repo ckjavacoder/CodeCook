@@ -27,6 +27,12 @@ $content-width:    1000px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+@mixin border-radius($num: 0){
+    -webkit-border-radius:  $num;
+    -moz-border-radius: $num;
+    -ms-border-radius: $num;
+    border-radius: $num;
+}
 
 
 // Using media queries with like this:
