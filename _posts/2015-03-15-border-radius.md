@@ -2,7 +2,7 @@
 layout: post
 title:  "Border Radius 实现半圆"
 date:   2015-03-15 22:21:25
-categories:  tangsj
+author:  tangsj
 permalink: /demo/border-radius
 ---
 

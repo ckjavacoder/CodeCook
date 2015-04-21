@@ -2,7 +2,7 @@
 layout: post
 title: TortoiseGit 为 Github 账号添加SSH keys
 date:   2015-03-21 12:35:25
-categories:  tangsj
+author:  tangsj
 permalink: /book/tortoiseGit-sshkey
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: GitHub SSH Key 配置
 date:   2015-03-21 12:27:25
-categories:  tangsj
+author:  tangsj
 permalink: /book/github-sshkey
 ---
 

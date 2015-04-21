@@ -2,7 +2,7 @@
 layout: post
 title:  "Ubuntu 安装 Jekyll"
 date:   2015-04-05 00:48:33
-categories:  tangsj
+author:  tangsj
 permalink: /book/ubuntu-jekyll
 ---
 

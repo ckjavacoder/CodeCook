@@ -2,7 +2,7 @@
 layout: post
 title:  "Ubuntu 安装 Consolas 字体"
 date:   2015-04-04 23:39:33
-categories:  tangsj
+author:  tangsj
 permalink: /book/linux-consolas
 ---
 

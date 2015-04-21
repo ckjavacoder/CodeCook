@@ -2,7 +2,7 @@
 layout: post
 title:  "Sublime Text 3 在Ubuntu 下无法输入中文"
 date:   2015-03-15 00:50:25
-categories:  tangsj
+author:  tangsj
 permalink: /book/st3-chinese
 ---
 在Ubuntu 14.04中安装了SublimeText 3之后发现既然不支持输入中文，于是在网上搜罗一下，发现很多人遇到了同样的问题，但是解决办法大该就只有一个。下面根据自身的安装及解决办法总结如下：
