@@ -117,7 +117,7 @@ void gtk_im_context_set_client_window (GtkIMContext *context,
 ####**4. 中文输入**
 到这里默认已经装好了中文输入法（搜狗输入法linux版）。得到第3步中的库libsublime-imfix.so之后，先试试看是否能正常使用中文输入法，在终端中输入如下命令：
 
-    LD_PRELOAD=./libsublime-imfix.so subl     
+    LD_PRELOAD=./libsublime-imfix.so subl
 
 subl是安装好SublimeText 3后的程序启动命令
 如果一切正常，在启动之后，搜狗输入法就能可以输入了。

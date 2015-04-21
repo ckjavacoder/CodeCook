@@ -12,9 +12,9 @@ permalink: /book/ubuntu-jekyll
 
 ##步骤二：更换Gem sources
 
-    sudo gem sources –remove https://rubygems.org/
+    sudo gem sources –r https://rubygems.org/
 
-    sudo gem sources –remove http://rubygems.org/
+    sudo gem sources –r http://rubygems.org/
 
     sudo gem sources -a http://ruby.taobao.org/
 

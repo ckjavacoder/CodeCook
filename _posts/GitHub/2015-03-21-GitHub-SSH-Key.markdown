@@ -32,7 +32,7 @@ https 和 SSH 的区别：
 
 这两个命令就是检查是否已经存在 id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，那么你可以跳过步骤2，直接进入步骤3。
 
-2、创建一个 SSH key 
+2、创建一个 SSH key
 ---
 
 	$ ssh-keygen -t rsa -C "your_email@example.com"
