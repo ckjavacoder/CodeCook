@@ -80,6 +80,38 @@ apache加入服务需要在apachectl启动脚本中加入下面两句
 
 还有找到DirectoryIndex index.html改为DirectoryIndex index.php index.html
 
+Apache2.2服务项目发布后 只能访问首页问题解决
+
+    #
+    # This should be changed to whatever you set DocumentRoot to.
+    #
+    <Directory "/usr/local/apache/htdocs">
+        #
+        # Possible values for the Options directive are "None", "All",
+        # or any combination of:
+        #   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews
+        #
+        # Note that "MultiViews" must be named *explicitly* --- "Options All"
+        # doesn't give it to you.
+        #
+        # The Options directive is both complicated and important.  Please see
+        # http://httpd.apache.org/docs/2.2/mod/core.html#options
+        # for more information.
+        #
+        Options Indexes FollowSymLinks
+        #
+        # AllowOverride controls what directives may be placed in .htaccess files.
+        # It can be "All", "None", or any combination of the keywords:
+        #   Options FileInfo AuthConfig Limit
+        #
+        AllowOverride None   （在这里， 改成 AllowOverride All）
+        #
+        # Controls who can get stuff from this server.
+        #
+        Order allow,deny
+        Allow from all
+    </Directory>
+
 注：apache 最后还需要针对系统进行内存调优，详细问谷老师吧！
 
 
